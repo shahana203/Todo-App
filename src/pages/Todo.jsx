@@ -18,7 +18,7 @@ const Todo = () => {
 
   const fetchTodos = async () => {
     try {
-      const res = await axios.get('https://todo-backend-lisc.onrender.com/api/todos', headers);
+      const res = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/todos`, headers);
       setTodos(res.data);
     } catch (err) {
       console.log(err);
@@ -28,7 +28,7 @@ const Todo = () => {
   const handleAdd = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('https://todo-backend-lisc.onrender.com/api/todos', { title: newTodo }, headers);
+      await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/todos`, { title: newTodo }, headers);
       setNewTodo('');
       fetchTodos();
     } catch (err) {
@@ -38,7 +38,7 @@ const Todo = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://todo-backend-lisc.onrender.com/api/todos/${id}`, headers);
+      await axios.delete(`${import.meta.env.VITE_BACKEND_URL}/api/todos/${id}`, headers);
       fetchTodos();
     } catch (err) {
       console.log(err);
@@ -52,7 +52,7 @@ const Todo = () => {
 
   const handleUpdate = async (id) => {
     try {
-      await axios.put(`https://todo-backend-lisc.onrender.com/api/todos/${id}`, { title: editValue }, headers);
+      await axios.put(`${import.meta.env.VITE_BACKEND_URL}/api/todos/${id}`, { title: editValue }, headers);
       setEditingTodoId(null);
       setEditValue('');
       fetchTodos();
@@ -63,7 +63,7 @@ const Todo = () => {
 
   const handleToggle = async (id, currentStatus) => {
     try {
-      await axios.put(`https://todo-backend-lisc.onrender.com/api/todos/${id}`, { completed: !currentStatus }, headers);
+      await axios.put(`${import.meta.env.VITE_BACKEND_URL}/api/todos/${id}`, { completed: !currentStatus }, headers);
       fetchTodos();
     } catch (err) {
       console.log(err);

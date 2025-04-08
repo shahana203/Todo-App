@@ -10,7 +10,7 @@ const Register = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('https://todo-backend-lisc.onrender.com/api/auth/register', {
+      await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/auth/register`, {
         username,
         password
       });

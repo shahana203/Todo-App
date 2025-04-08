@@ -10,7 +10,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://todo-backend-lisc.onrender.com/api/auth/login', {
+      const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/auth/login`, {
         username,
         password
       });
