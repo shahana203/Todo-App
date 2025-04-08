@@ -1,0 +1,171 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 500px;
+    margin: 60px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* 🔐 Login/Register Form Styling */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  button {
+    padding: 12px;
+    background-color: #4c66af;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #4556a0;
+  }
+  
+  /* 🔗 Register Link */
+  .register-link {
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .register-link a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .register-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* 📝 Todo List Styles */
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    background: #eee;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  li input[type="checkbox"] {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+  
+  li span {
+    flex: 1;
+  }
+  
+  li span.completed {
+    text-decoration: line-through;
+    color: #888;
+  }
+  
+  li button {
+    padding: 6px 12px;
+    font-size: 14px;
+    margin-left: 4px;
+  }
+  
+  li input[type="text"] {
+    padding: 6px;
+    flex: 1;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  /* 🚪 Logout Button */
+  .logout {
+    background-color: #f44336;
+    width: 100px;
+    margin-top: 20px;
+    margin-left:40% ;
+  }
+  
+  .logout:hover {
+    background-color: #d6352c;
+  }
+  
+  /* 📱 Responsive for small screens */
+  @media (max-width: 600px) {
+    .container {
+      margin: 30px 10px;
+      padding: 15px;
+    }
+  
+    form {
+      flex-direction: column;
+      gap: 12px;
+    }
+  
+    button {
+      width: 100%;
+    }
+  
+    li {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    li button {
+      width: 100%;
+      margin: 4px 0;
+    }
+  
+    li input[type="text"],
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 600px){
+
+    .logout {
+        background-color: #f44336;
+        width: 100px;
+        margin-top: 20px;
+        margin-left:35% ;
+  }
+}
